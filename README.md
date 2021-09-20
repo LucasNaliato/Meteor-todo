@@ -16,6 +16,8 @@
 
 Esse todo-app foi feito com o único intuito de aprender mais sobre o framework fullstack Meteor e também iniciar os meus estudos com Vue.
 
+<img src="/public/images/Todo-meteor.PNG">
+
 <a id="-como-executar-o-projeto"></a>
 
 ## 🚀 Como executar o projeto
