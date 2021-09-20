@@ -1,5 +1,3 @@
-import '../imports/api/methods'
-import '../imports/api/publications'
 import { Meteor } from 'meteor/meteor';
 import { TasksCollection } from '../imports/api/collections/TasksCollection';
 

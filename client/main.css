@@ -1,3 +1,7 @@
+:root {
+    font-size: 60%;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,13 +10,12 @@
 
 html,
 body {
-    background-color: #E1E5F2;
     height: 100vh;
 }
 
 body {
+    background-color: #E1E5F2;
     display: flex;
-    align-items: center;
     justify-content: center;
 }
 
@@ -25,39 +28,101 @@ li {
     max-width: 700px;
 }
 
-.date-title {
-    font: 700 32px Inter;
-    line-height: 39px;
+header {
+    margin: 1.5rem auto;
+}
 
+.date-title {
+    font: 700 3.5rem Inter;
     color: #022B3A;
 }
 
 .checked-span {
-    font: 600 18px Inter;
-    line-height: 17px;
-
+    font: 600 2rem Inter;
     color: #1F7A8C;
 }
 
-.new-task {
-    margin-top: 1rem;
+.divider {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    border: 0;
+    border-top: 1px solid #022B3A;
+}
+
+.tasks-title {
+    font: 700 3rem Inter;
+    color: #022B3A;
+    margin-bottom: 1rem;
+}
+
+.task-container + .task-container {
+    margin: 1.5rem auto;
+}
+
+.task-container input[type="checkbox"] {
+    position: static;
+    width: 1.3rem;
+    height: 1.3rem;
+
+    border: 2px solid #022B3A;
+    box-sizing: border-box;
+    border-radius: 2rem;
+}
+
+.text {
+    font: 500 2.2rem Inter;
+    color: #1F7A8C;
+}
+
+.category {
+    font: 500 1.3rem Inter;
+    color: #1F7A8C;
+    opacity: 0.8;
+    margin-top: .5rem;
+}
+
+.done {
+    color: green;
+    opacity: 0.6;
+}
+
+li a {
+    cursor: pointer;
+    margin: auto 1rem;
+}
+
+.delete {
+    width: .5rem;
+    height: .5rem;
+    color: #DF2935;
+}
+
+div button {
+    cursor: pointer;
 }
 
 .btn-form {
-    background: linear-gradient(180deg, #3F4EA0 0%, #473FA0 100%);
-    color: white;
-    border: 2px solid #515CC6;
+    background: linear-gradient(180deg, #022b3a 0%, #055a79 100%);
+    color: #bfdbf7;
+    border: none;
     box-sizing: border-box;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
-    border-radius: 1.7rem;
+    border-radius: 3rem;
     position: absolute;
     margin: 2rem 2rem;
     right: 0;
     bottom: 0;
+    transition-duration: 1s;
 
-    width: 56px;
-    height: 56px;
+    width: 6rem;
+    height: 6rem;
 }
+
+.btn-form:hover {
+    background: #bfdbf7;
+    color: #022b3a;
+}
+
 
 .modal-backdrop {
     position: fixed;
@@ -74,11 +139,10 @@ li {
 
 .modal {
     width: 20rem;
-    height: 20rem;
+    height: 22rem;
 
     background: #ffffff;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-    padding: 2rem;
     border-radius: .8rem;
     overflow-x: auto;
     overflow-y:hidden;
@@ -90,16 +154,16 @@ li {
 form label {
     display: flex;
     justify-content: center;
-    font: 500 20px Inter;
+    font: 500 1.6rem Inter;
     margin: .6rem auto;
     color: #022b3a;
 }
 
 form input {
-    font: 500 14px Inter;
+    font: 500 1rem Inter;
     border: 1px solid #bfdbf7;
     width: 100%;
-    height: 2rem;
+    height: 2.5rem;
     padding: 0 .7rem;
     border-radius: .7rem;
     background: #e1e5f2;
@@ -113,17 +177,12 @@ input:focus {
     margin: 1.7rem auto;
 }
 
-.input-task, .input-category {
-    margin: 0.3rem auto;
-    display: block;
-}
-
-form button {
-    margin: auto .5rem;
+.modal button {
+    margin: 1rem .7rem;
 }
 
 .add-task {
-    font: 500 16px Inter;
+    font: 500 1rem Inter;
     color: #022b3a;
     border-radius: 2rem;
     border: none;
@@ -131,11 +190,11 @@ form button {
     height: 3rem;
     background: #bfdbf7;
 
-    margin-top: 1rem
+    margin-top: 1rem;
 }
 
 .btn-close {
-    font: 500 16px Inter;
+    font: 500 1rem Inter;
     color: #022b3a;
     border-radius: 2rem;
     border: none;
@@ -143,41 +202,50 @@ form button {
     height: 3rem;
     background: #bfdbf7;
 
-    margin-top: 1rem
-}
-
-.tasks-title {
-    font: 700 20px Inter;
-    color: #022B3A;
-}
-
-.text {
-    font: 500 16px Inter;
-    color: #1F7A8C;
-}
-
-.done {
-    color: green;
-    opacity: 0.6;
-}
-
-li a {
-    cursor: pointer;
-    align-items: center;
-}
-
-.edit {
-    color: #3772ff;
-}
-
-.delete {
-    color: #DF2935;
-}
-
-div button {
-    cursor: pointer;
+    margin-top: 1rem;
 }
 
 .hidden {
     display: none;
+}
+
+@media (min-width: 700px){
+    :root {
+        font-size: 68%;
+    }
+
+    .modal {
+        width: 27rem;
+        height: 27rem;
+    }
+
+    form label {
+        font-size: 2rem;
+    }
+    
+    form input {
+        font-size: 1.4rem;
+    }
+
+    .modal button {
+        margin: 1.5rem 1.3rem;
+    }
+
+    .add-task {
+        font-size: 1.5rem;
+        width: 8rem;
+        height: 3rem;
+    }
+    
+    .btn-close {
+        font-size: 1.5rem;
+        width: 8rem;
+        height: 3rem;
+    }
+}
+
+@media (min-width: 1100px) {
+    :root {
+        font-size: 75%
+    }
 }

@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <Header />
+    <hr class="divider">
     <Modal v-show="isModal"/>
     <h2 class="tasks-title">A fazer</h2>
     <ul>

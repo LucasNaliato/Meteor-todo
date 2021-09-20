@@ -17,7 +17,6 @@
     </div>
 </template>
 
-
 <script>
     import { TasksCollection } from "../../api/collections/TasksCollection";
 
