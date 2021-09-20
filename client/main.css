@@ -72,6 +72,7 @@ header {
 .text {
     font: 500 2.2rem Inter;
     color: #1F7A8C;
+    margin-left: .5rem;
 }
 
 .category {
